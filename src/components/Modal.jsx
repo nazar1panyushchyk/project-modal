@@ -11,7 +11,7 @@ export default class Modal extends React.Component {
       <>
         <h1>Modal window</h1>
 
-        <div
+        <form
           style={{
             border: "1px solid #000",
             borderRadius: "36px",
@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
           <label>Enter text</label>
           <input type="text" />
           <button>submit</button>
-        </div>
+        </form>
       </>
     );
   }
