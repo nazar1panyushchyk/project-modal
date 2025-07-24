@@ -3,10 +3,16 @@ import "../styles/Modal.css";
 
 
 class Modal extends React.Component {
+
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
   }
 
+  componentDidUpdate(prevProps) {  
+    if(!prevProps.isOpen || this.props.isOpen){
+    console.log("modal is open")
+    }
+  }
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
