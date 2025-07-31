@@ -1,27 +1,29 @@
 import "./App.css";
-import ModalWindow from "./components/Modal";
+import Modal from "./components/Modal";
 import React from "react";
 
 export default class App extends React.Component {
   state = {
-    isOpen: false,
-  }
-  openModal = () =>{
-    this.setState({isOpen: true})
-  }
-  closeModal = () =>{
-    this.setState({isOpen: false})
-  }
-  render() {
+    isModalOpen: false,
+  };
 
-  return (
-    <>
-    <h1>hello</h1>
-      <button onClick={this.openModal}>Відкрити</button>
-      <ModalWindow isOpen={this.state.openModal} isClose={this.closeModal}/>
-    </>
-  );
-}
+  openModal = () => {
+    this.setState({ isModalOpen: true });
+  };
+
+  closeModal = () => {
+    this.setState({ isModalOpen: false });
+  };
+
+  render() {
+    return (
+      <div style={{ padding: "40px", textAlign: "center" }}>
+        <h1>React Модальне Вікно</h1>
+        <button onClick={this.openModal}>Відкрити модальне вікно</button>
+        <Modal isOpen={this.state.isModalOpen} onClose={this.closeModal} />
+      </div>
+    );
+  }
 }
 
 
