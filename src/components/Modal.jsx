@@ -13,11 +13,13 @@ export default class Modal extends Component {
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown);
     console.log("Modal закрився");
+
   }
 
   componentDidUpdate(prevProps) {
     if (!prevProps.isOpen && this.props.isOpen) {
       console.log("Modal став відкритим");
+        
     }
   }
 
@@ -31,7 +33,7 @@ export default class Modal extends Component {
     if (!this.props.isOpen) return null;
 
     return (
-      <div onClick={this.props.onClose}>
+      <div onClick={this.props.onClose} className="modal">
         <div onClick={(e) => e.stopPropagation()}>
           <h2>Модальне вікно</h2>
           <p>Натисни ESC або кнопки, щоб закрити</p>
