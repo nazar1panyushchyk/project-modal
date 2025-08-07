@@ -50,7 +50,7 @@ class Modal extends React.Component {
             alignItems: "center",
             flexDirection: "column",
             gap: "20px",
-            backgroundColor: "rgba(199, 198, 198, 0.8)",
+            backgroundColor: "rgba(86, 86, 86, 0.8)",
             width: "400px",
             height: "400px"
           }}
