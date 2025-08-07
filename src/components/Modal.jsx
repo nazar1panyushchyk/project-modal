@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import "../styles/Modal.css";
+import "../styles/modal.css";
 
 
 
@@ -27,12 +27,13 @@ export default class Modal extends Component {
     }
   };
 
+
   render() {
     if (!this.props.isOpen) return null;
 
     return (
       <div onClick={this.props.onClose}>
-        <div onClick={(e) => e.stopPropagation()}>
+        <div className="modal-window" sx={{backgroundColor: 'blue'}} onClick={(e) => e.stopPropagation()}>
           <h2>Модальне вікно</h2>
           <p>Натисни ESC або кнопки, щоб закрити</p>
           <button onClick={this.props.onClose}>Закрити</button>

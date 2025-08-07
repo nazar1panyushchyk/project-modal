@@ -1,6 +1,7 @@
 import "./App.css";
 import Modal from "./components/Modal";
 import React from "react";
+import "./styles/modal.css"
 
 export default class App extends React.Component {
   state = {
