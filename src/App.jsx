@@ -18,7 +18,7 @@ export default class App extends React.Component {
     <>
     <h1>hello</h1>
       <button onClick={this.openModal}>Відкрити</button>
-      <ModalWindow isOpen={this.state.openModal} isClose={this.closeModal}/>
+      <ModalWindow isOpen={this.state.isOpen} isClose={this.closeModal}/>
     </>
   );
 }
