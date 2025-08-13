@@ -2,8 +2,6 @@ import React from "react";
 import { Component } from "react";
 import "../styles/Modal.css";
 
-
-
 export default class Modal extends Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown);
@@ -31,10 +29,15 @@ export default class Modal extends Component {
     if (!this.props.isOpen) return null;
 
     return (
-      <div onClick={this.props.onClose}>
-        <div onClick={(e) => e.stopPropagation()}>
+      <div
+        onClick={this.props.onClose}
+        className="modal-container animate__backInLeft"
+      >
+        <div onClick={(e) => e.stopPropagation()} className="modal">
           <h2>Модальне вікно</h2>
-          <p>Натисни ESC або кнопки, щоб закрити</p>
+          <p>
+            Натисни <span>ESC</span> або кнопки, щоб закрити
+          </p>
           <button onClick={this.props.onClose}>Закрити</button>
         </div>
       </div>

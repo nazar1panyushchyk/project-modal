@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "40px", textAlign: "center" }}>
+      <div className="open-modal" style={{ padding: "40px", textAlign: "center" }}>
         <h1>React Модальне Вікно</h1>
         <button onClick={this.openModal}>Відкрити модальне вікно</button>
         <Modal isOpen={this.state.isModalOpen} onClose={this.closeModal} />
